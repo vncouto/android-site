@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@font-face {
+    font-family: "iDroid";
+    src: url("fontes/idroid.otf") format("opentype");
+    font-weight: normal;
+}
+
+:root {
+    --cor1: #D90404;
+    --cor2: #A60303;
+    --cor3: #730202;
+    --cor4: #400101;
+    --cor5: #0D0D0D;
+
+    --fonte-padrão: 'Open Sans', verdana, helvetica, sans-serif;
+    --fonte-destaque: 'Press Start 2P', cursive;
+    --fonte-idroid: 'iDroid', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #D90404;
+}
+
+body a.external::after {
+    content: "\00A0\1F517";
+}
+
+header {
+    background-image: linear-gradient(to bottom, #A60303, #730202, #400101);
+    box-shadow: 0px 1px 10px black;
+
+    min-height: 150px;
+}
+
+header > h1 { 
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 2.5em;
+    text-shadow: 6px 6px 6px black;
+    text-align: center;
+    font-weight: normal;
+    
+    padding: 30px;
+}
+
+header > p {
+    color: white;
+    font-family: var(--fonte-padrão);
+    font-size: 1.1em;
+    text-shadow: 3px 3px 3px black;
+    text-align: center;
+
+    max-width: 500px;
+    margin: auto;
+    padding: 0px 10px 30px 10px;
+
+}
+
+nav {
+    padding: 0px 10px 10px 10px;
+}
+
+nav a {
+    color: white;
+    font-family: var(--fonte-padrão);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav span {
+    padding: 10px;
+}
+
+nav span:hover {
+    color: #0D0D0D;
+    background-color: var(--cor1);
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+
+main {
+    background-color: white;
+
+    box-shadow: 0px 0px 10px 2px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    min-width: 300px;
+    max-width: 800px;
+    margin: 0px auto 30px auto;
+    padding: 30px;
+}
+
+main h1 {
+    color: var(--cor3);
+    font-family: var(--fonte-idroid);
+    text-align: center;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+main h2 {
+    color: var(--cor2);
+    font-family: var(--fonte-idroid);
+    font-size: 1.em;
+    font-weight: normal;
+}
+
+main p {
+    font-family: var(--fonte-padrão);
+    margin: 15px 0px;
+    text-align: justify;
+    line-height: 2em;
+}
+
+main strong {
+    color: var(--cor2);
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: rgba(255, 0, 0, 0.555);
+    border-radius: 5px;
+
+    padding: 2px 5px; 
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+    background-color: white;
+    transition: 0.3s;
+}
+
+main img {
+    width: 100%;
+}
+
+main img.small {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+/* Forma Guanabara
+
+main div.video {
+    background-color: var(--cor2);
+    border-radius: 10px;
+
+    margin-bottom: 30px;
+    padding: 20px;
+    position: relative;
+    padding-bottom: 50%;
+
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.801);
+}
+
+main iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+*/
+
+main div.video {
+    background-color: var(--cor2);
+    border-radius: 10px;
+
+    margin-bottom: 30px;
+    padding: 10px;
+
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.801);
+
+}
+
+main iframe {
+    display: block;
+    width: 100%;
+
+    border-radius: 10px;
+}
+
+aside {
+    background-color: var(--cor2);
+    color: white;
+
+    padding: 10px;
+    border-radius: 10px;
+
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.801);
+}
+
+aside h3 {
+    background-color: black;
+    
+    font-family: var(--fonte-padrão);
+
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside p {
+    text-align: justify;
+}
+
+aside ul {
+    
+    list-style: inside;
+    columns: 2;
+}
+
+aside li {
+    list-style-type: "\2714\00A0\00A0"; /* 2714 = Check | 00A0 = Caractere invisível*/
+    font-family: var(--fonte-padrão);
+}
+
+aside strong {
+    color: white;
+}
+
+aside a {
+    color: white;
+    background-color: black;
+    padding: 3px 6px;
+    border-radius: 10px;
+}
+
+aside a:hover {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 3px 6px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #0D0D0D;
+    
+    color: white;
+    font-family: var(--fonte-padrão);
+    text-align: center;
+    font-size: 0.8em;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cor1);
+}
+
